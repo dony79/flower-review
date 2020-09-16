@@ -15,19 +15,33 @@ public class Review {
     private String customerName;
     private String phoneNumber;
     private String review;
+    private String status;
 
     @PostPersist
     public void onPostPersist(){
-        ReviewRequested reviewRequested = new ReviewRequested();
-        BeanUtils.copyProperties(this, reviewRequested);
-        reviewRequested.publishAfterCommit();
 
 
-        ReveiwWrited reveiwWrited = new ReveiwWrited();
-        BeanUtils.copyProperties(this, reveiwWrited);
-        reveiwWrited.publishAfterCommit();
+
+        if(this.getStatus().equals("Shipped")) {
+            ReviewRequested reviewRequested = new ReviewRequested();
+            BeanUtils.copyProperties(this, reviewRequested);
+            reviewRequested.publishAfterCommit();
+        }
+
+        else if(this.getStatus().equals("ReviewWrited")){
+            ReviewWrited reviewWrited = new ReviewWrited();
+            BeanUtils.copyProperties(this, reviewWrited);
+            reviewWrited.publishAfterCommit();
+        }
+    }
 
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus() {
+        this.status = status;
     }
 
 

@@ -1,6 +1,6 @@
 package awslv2flower;
 
-public class ReveiwWrited extends AbstractEvent {
+public class ReviewWrited extends AbstractEvent {
 
     private Long id;
     private Long orderId;
