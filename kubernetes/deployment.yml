@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: review
-          image: username/review:latest
+          image: 271153858532.dkr.ecr.ap-southeast-1.amazonaws.com/admin17-flower-review:v1 
           ports:
             - containerPort: 8080
           readinessProbe:

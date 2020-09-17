@@ -40,11 +40,7 @@ public class Review {
         return status;
     }
 
-    public void setStatus() {
-        this.status = status;
-    }
-
-
+    
     public Long getId() {
         return id;
     }

@@ -1,9 +1,7 @@
-awslv2flower/ReviewDetailViewHandler.class
 awslv2flower/Review.class
 awslv2flower/ReviewRepository.class
 awslv2flower/ReviewController.class
 awslv2flower/AbstractEvent.class
-awslv2flower/ReveiwWrited.class
 awslv2flower/ReviewDetailRepository.class
 awslv2flower/AbstractEvent$1.class
 awslv2flower/ReviewRequested.class
